@@ -25,19 +25,18 @@ export const Header: React.FC<HeaderProps> = ({
         </div>
       </div>
 
-      {/* Navigation Links (Hidden on Mobile) */}
       <nav className="hidden md:flex items-center gap-3">
-        <button
-          onClick={onArchiveClick}
-          className="font-mono text-[10px] md:text-xs font-semibold text-black bg-white/90 hover:bg-black hover:text-white px-5 py-2 border border-black/10 rounded-full transition-all duration-300 tracking-wider cursor-pointer shadow-xs"
-        >
-          ARCHIVE
-        </button>
         <button
           onClick={onProcessClick}
           className="font-mono text-[10px] md:text-xs font-semibold text-black bg-white/90 hover:bg-black hover:text-white px-5 py-2 border border-black/10 rounded-full transition-all duration-300 tracking-wider cursor-pointer shadow-xs"
         >
           ABOUT ME
+        </button>
+        <button
+          onClick={onArchiveClick}
+          className="font-mono text-[10px] md:text-xs font-semibold text-black bg-white/90 hover:bg-black hover:text-white px-5 py-2 border border-black/10 rounded-full transition-all duration-300 tracking-wider cursor-pointer shadow-xs"
+        >
+          JOURNEY
         </button>
         <button
           onClick={onLabsClick}
