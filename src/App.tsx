@@ -207,7 +207,7 @@ export default function App() {
           <div className="lg:col-span-6 relative flex justify-center lg:justify-end items-end h-[60vh] lg:h-[75vh] min-h-[450px] lg:min-h-[580px] w-full select-none">
             
             {/* Neon Lime Asterisk shape behind portrait */}
-            <LimeAsterisk className="absolute right-[2%] bottom-[35%] w-60 h-60 sm:w-72 sm:h-72 lg:w-80 lg:h-80 opacity-100 rotate-[15deg] z-0" />
+            <LimeAsterisk className="absolute right-[2%] bottom-[46%] w-60 h-60 sm:w-72 sm:h-72 lg:w-80 lg:h-80 opacity-100 rotate-[15deg] z-0" />
 
             {/* The Main Portrait Image */}
             <motion.img
@@ -216,7 +216,7 @@ export default function App() {
               transition={{ duration: 0.8, ease: 'easeOut', delay: 0.15 }}
               src="/image copy.png"
               alt="Shashank Portrait"
-              className="relative z-10 h-[60vh] sm:h-[70vh] lg:h-[82vh] w-auto object-contain filter grayscale contrast-110 brightness-95"
+              className="relative z-10 h-[65vh] sm:h-[78vh] lg:h-[90vh] w-auto object-contain filter grayscale contrast-110 brightness-95"
             />
 
           </div>
