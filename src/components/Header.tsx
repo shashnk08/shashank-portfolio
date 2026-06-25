@@ -20,7 +20,7 @@ export const Header: React.FC<HeaderProps> = ({
         <span className="font-display text-2xl md:text-3xl tracking-widest text-black">
           SHASHANK
         </span>
-        <div className="w-8 h-8 md:w-10 md:h-10 bg-[#CCFF00] text-black rounded-full flex items-center justify-center font-bold transition-transform duration-500 ease-out group-hover:rotate-180">
+        <div className="w-8 h-8 md:w-10 md:h-10 bg-[#FF5C00] text-black rounded-full flex items-center justify-center font-bold transition-transform duration-500 ease-out group-hover:rotate-180">
           <span className="text-lg md:text-xl">✦</span>
         </div>
       </div>
@@ -51,7 +51,7 @@ export const Header: React.FC<HeaderProps> = ({
       <button
         onClick={onCommissionClick}
         aria-label="Open commission drawer"
-        className="font-mono text-xs font-bold bg-[#CCFF00] text-black px-6 py-2.5 rounded-full hover:bg-black hover:text-white transition-all duration-300 transform hover:-translate-y-0.5 cursor-pointer shadow-sm"
+        className="font-mono text-xs font-bold bg-[#FF5C00] text-white px-6 py-2.5 rounded-full hover:bg-black hover:text-white transition-all duration-300 transform hover:-translate-y-0.5 cursor-pointer shadow-sm"
       >
         CONNECT WITH ME
       </button>

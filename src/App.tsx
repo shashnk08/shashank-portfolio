@@ -48,15 +48,6 @@ const DotGrid: React.FC<{ className?: string }> = ({ className }) => (
   </svg>
 );
 
-// Custom SVG Neon Lime Asterisk shape
-const LimeAsterisk: React.FC<{ className?: string }> = ({ className }) => (
-  <svg className={className} viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <rect x="44" y="10" width="12" height="80" rx="6" fill="#CCFF00" transform="rotate(0 50 50)" />
-    <rect x="44" y="10" width="12" height="80" rx="6" fill="#CCFF00" transform="rotate(45 50 50)" />
-    <rect x="44" y="10" width="12" height="80" rx="6" fill="#CCFF00" transform="rotate(90 50 50)" />
-    <rect x="44" y="10" width="12" height="80" rx="6" fill="#CCFF00" transform="rotate(135 50 50)" />
-  </svg>
-);
 
 export default function App() {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
@@ -78,7 +69,7 @@ export default function App() {
   };
 
   return (
-    <div className="relative min-h-screen w-full overflow-x-hidden flex flex-col bg-white text-black font-sans selection:bg-[#CCFF00] selection:text-black">
+    <div className="relative min-h-screen w-full overflow-x-hidden flex flex-col bg-white text-black font-sans selection:bg-[#FF5C00] selection:text-black">
       
       {/* 1. Background Division (Light Gray Polygon at Bottom) */}
       <div 
@@ -132,7 +123,7 @@ export default function App() {
             >
               <span className="tracking-tighter text-neutral-950 font-black">ENGINEERED</span>
               <span className="tracking-tighter text-neutral-950 font-black">WITH</span>
-              <span className="text-[#CCFF00] text-stroke-black tracking-normal text-[72px] sm:text-[90px] md:text-[115px] lg:text-[128px] xl:text-[145px] drop-shadow-[0_1.5px_2px_rgba(0,0,0,0.15)] mt-1">
+              <span className="text-[#FF5C00] text-stroke-black tracking-normal text-[72px] sm:text-[90px] md:text-[115px] lg:text-[128px] xl:text-[145px] drop-shadow-[0_1.5px_2px_rgba(0,0,0,0.15)] mt-1">
                 <ScrambleText text={headlinePhrases[headlineIndex]} />
               </span>
             </motion.h1>
@@ -159,7 +150,7 @@ export default function App() {
                 className="group flex items-center gap-4 bg-black text-white px-7 py-3.5 rounded-full hover:bg-neutral-800 transition-all duration-300 font-mono text-xs font-bold tracking-widest shadow-md cursor-pointer"
               >
                 <span>VIEW MY WORK</span>
-                <div className="w-6 h-6 rounded-full bg-[#CCFF00] flex items-center justify-center text-black group-hover:translate-x-1 transition-transform duration-300">
+                <div className="w-6 h-6 rounded-full bg-[#FF5C00] flex items-center justify-center text-black group-hover:translate-x-1 transition-transform duration-300">
                   <span className="text-sm font-bold">→</span>
                 </div>
               </button>
@@ -173,7 +164,7 @@ export default function App() {
               className="mt-12 flex items-center gap-3"
             >
               <a 
-                href="https://github.com" 
+                href="https://github.com/shashnk08" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-white border border-neutral-100 flex items-center justify-center text-neutral-700 hover:text-black hover:border-black hover:shadow-md transition-all duration-300 shadow-xs"
@@ -181,7 +172,7 @@ export default function App() {
                 <GithubIcon />
               </a>
               <a 
-                href="https://linkedin.com" 
+                href="https://www.linkedin.com/in/shashank-g-s-a2b425225/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-white border border-neutral-100 flex items-center justify-center text-neutral-700 hover:text-black hover:border-black hover:shadow-md transition-all duration-300 shadow-xs"
@@ -189,7 +180,7 @@ export default function App() {
                 <LinkedinIcon />
               </a>
               <a 
-                href="https://instagram.com" 
+                href="https://www.instagram.com/shashank_shettar08?igsh=MTExaTFyM2Q5Y2pndQ==" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-white border border-neutral-100 flex items-center justify-center text-neutral-700 hover:text-black hover:border-black hover:shadow-md transition-all duration-300 shadow-xs"
@@ -197,7 +188,7 @@ export default function App() {
                 <InstagramIcon />
               </a>
               <a 
-                href="mailto:contact@example.com"
+                href="mailto:shashankgs082004@gmail.com"
                 className="w-10 h-10 rounded-full bg-white border border-neutral-100 flex items-center justify-center text-neutral-700 hover:text-black hover:border-black hover:shadow-md transition-all duration-300 shadow-xs"
               >
                 <MailIcon />
@@ -208,8 +199,15 @@ export default function App() {
           {/* Right Column: Hero Portrait, Accent shapes */}
           <div className="lg:col-span-7 relative flex justify-center lg:justify-end items-end h-[75vh] lg:h-[88vh] min-h-[500px] lg:min-h-[680px] w-full select-none overflow-visible">
             
+            {/* Top-Right Info Accent */}
+            <div className="absolute top-[8%] right-[5%] z-20 font-mono text-[10px] sm:text-xs text-neutral-400 tracking-widest text-right select-none leading-relaxed hidden sm:block">
+              <div>[ BASED IN INDIA ]</div>
+              <div className="text-black font-semibold">28.6139° N, 77.2090° E</div>
+              <div className="text-[#FF5C00] font-bold">UTC+05:30 // AVAILABLE</div>
+            </div>
+
             {/* Neon Lime Asterisk shape behind portrait */}
-            <LimeAsterisk className="absolute right-[8%] bottom-[42%] w-64 h-64 sm:w-80 sm:h-80 lg:w-[360px] lg:h-[360px] opacity-100 rotate-[12deg] z-0" />
+            <img src="/asterisk.svg" alt="asterisk" className="absolute right-[15%] bottom-[28%] w-64 h-64 sm:w-80 sm:h-80 lg:w-[360px] lg:h-[360px] opacity-100 rotate-[12deg] z-0 pointer-events-none" />
 
             {/* The Main Portrait Image */}
             <motion.img
