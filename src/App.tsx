@@ -449,6 +449,15 @@ export default function App() {
         </div>
       </section>
 
+      {/* ================= SECTION 8.5: IMAGE ================= */}
+      <div className="w-full z-20 relative pb-12" style={{ paddingLeft: '2in' }}>
+        <img 
+          src="/image.png" 
+          alt="Shashank Illustration" 
+          className="max-w-[400px] w-full h-auto object-contain rounded-lg"
+        />
+      </div>
+
       {/* ================= SECTION 9: CTA FOOTER ================= */}
       <section id="contact" className="pt-24 pb-12 px-6 sm:px-12 md:px-20 lg:px-24 bg-neutral-950 text-white z-20 relative w-full border-t border-neutral-800">
         <div className="w-[92vw] max-w-[1500px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
