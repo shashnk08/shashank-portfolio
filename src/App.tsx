@@ -108,29 +108,31 @@ export default function App() {
       />
 
       {/* Main content container */}
-      <main className="flex-1 flex flex-col justify-center items-center relative z-20 px-6 sm:px-12 md:px-20 lg:px-24 pt-28 pb-20 w-full max-w-7xl mx-auto">
-        <div className="w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      <main className="flex-1 flex flex-col justify-end items-center relative z-20 px-6 sm:px-10 md:px-12 pt-28 pb-0 w-[92vw] max-w-[1500px] mx-auto">
+        <div className="w-full grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-4 items-end">
           
           {/* Left Column: Software Engineer Copy & CTAs */}
-          <div className="lg:col-span-6 flex flex-col items-start text-left select-none z-20">
+          <div className="lg:col-span-5 flex flex-col items-start text-left select-none z-20 pb-16 lg:pb-24">
             {/* Top Label */}
             <motion.span 
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, ease: 'easeOut' }}
-              className="font-mono text-xs md:text-sm tracking-widest text-neutral-500 font-bold mb-4"
+              className="font-mono text-xs md:text-sm tracking-widest text-neutral-500 font-bold mb-3"
             >
               // SOFTWARE ENGINEER
             </motion.span>
 
+            {/* Title / Heading */}
             <motion.h1 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, ease: 'easeOut', delay: 0.1 }}
-              className="font-display leading-none text-black text-[12vw] sm:text-[60px] md:text-[80px] lg:text-[90px] xl:text-[100px] uppercase flex flex-col font-black"
+              className="font-display leading-[0.82] text-black text-[64px] sm:text-[80px] md:text-[100px] lg:text-[108px] xl:text-[120px] uppercase flex flex-col font-black"
             >
-              <span className="tracking-tight text-neutral-950">ENGINEERED WITH</span>
-              <span className="text-[#CCFF00] text-stroke-black tracking-normal drop-shadow-[0_1.5px_2px_rgba(0,0,0,0.15)] -mt-2 sm:-mt-4">
+              <span className="tracking-tighter text-neutral-950 font-black">ENGINEERED</span>
+              <span className="tracking-tighter text-neutral-950 font-black">WITH</span>
+              <span className="text-[#CCFF00] text-stroke-black tracking-normal text-[72px] sm:text-[90px] md:text-[115px] lg:text-[128px] xl:text-[145px] drop-shadow-[0_1.5px_2px_rgba(0,0,0,0.15)] mt-1">
                 <ScrambleText text={headlinePhrases[headlineIndex]} />
               </span>
             </motion.h1>
@@ -140,7 +142,7 @@ export default function App() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, ease: 'easeOut', delay: 0.2 }}
-              className="mt-6 text-neutral-600 font-sans text-sm md:text-base max-w-lg leading-relaxed font-medium"
+              className="mt-6 text-neutral-600 font-sans text-sm md:text-base max-w-[520px] leading-relaxed font-semibold"
             >
               I’m Shashank — a software engineer crafting scalable digital products, clean interfaces, and purposeful user experiences.
             </motion.p>
@@ -150,11 +152,11 @@ export default function App() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, ease: 'easeOut', delay: 0.3 }}
-              className="mt-8 flex flex-col sm:flex-row items-start sm:items-center gap-6"
+              className="mt-10 flex flex-col sm:flex-row items-start sm:items-center gap-6"
             >
               <button 
                 onClick={() => openDrawerWithView('projects')}
-                className="group flex items-center gap-4 bg-black text-white px-6 py-3 rounded-full hover:bg-neutral-800 transition-all duration-300 font-mono text-xs font-bold tracking-widest shadow-md cursor-pointer"
+                className="group flex items-center gap-4 bg-black text-white px-7 py-3.5 rounded-full hover:bg-neutral-800 transition-all duration-300 font-mono text-xs font-bold tracking-widest shadow-md cursor-pointer"
               >
                 <span>VIEW MY WORK</span>
                 <div className="w-6 h-6 rounded-full bg-[#CCFF00] flex items-center justify-center text-black group-hover:translate-x-1 transition-transform duration-300">
@@ -203,11 +205,11 @@ export default function App() {
             </motion.div>
           </div>
 
-          {/* Right Column: Hero Portrait, Accent shapes, Handwriting accent & Floating card */}
-          <div className="lg:col-span-6 relative flex justify-center lg:justify-end items-end h-[60vh] lg:h-[75vh] min-h-[450px] lg:min-h-[580px] w-full select-none">
+          {/* Right Column: Hero Portrait, Accent shapes */}
+          <div className="lg:col-span-7 relative flex justify-center lg:justify-end items-end h-[75vh] lg:h-[88vh] min-h-[500px] lg:min-h-[680px] w-full select-none overflow-visible">
             
             {/* Neon Lime Asterisk shape behind portrait */}
-            <LimeAsterisk className="absolute right-[2%] bottom-[46%] w-60 h-60 sm:w-72 sm:h-72 lg:w-80 lg:h-80 opacity-100 rotate-[15deg] z-0" />
+            <LimeAsterisk className="absolute right-[8%] bottom-[42%] w-64 h-64 sm:w-80 sm:h-80 lg:w-[360px] lg:h-[360px] opacity-100 rotate-[12deg] z-0" />
 
             {/* The Main Portrait Image */}
             <motion.img
@@ -216,7 +218,7 @@ export default function App() {
               transition={{ duration: 0.8, ease: 'easeOut', delay: 0.15 }}
               src="/image copy.png"
               alt="Shashank Portrait"
-              className="relative z-10 h-[65vh] sm:h-[78vh] lg:h-[90vh] w-auto object-contain filter grayscale contrast-110 brightness-95"
+              className="relative z-10 h-[75vh] lg:h-[88vh] w-auto object-contain filter grayscale contrast-110 brightness-95 lg:mr-[10%]"
             />
 
           </div>
