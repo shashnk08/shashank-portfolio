@@ -219,7 +219,7 @@ export default function App() {
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8, ease: 'easeOut', delay: 0.15 }}
-              src="/image copy.png"
+              src="/image copy.webp"
               alt="Shashank Portrait"
               className="relative z-10 h-[75vh] lg:h-[88vh] w-auto object-contain filter grayscale contrast-110 brightness-95 lg:mr-[10%]"
             />
@@ -333,7 +333,7 @@ export default function App() {
       <section className="py-20 sm:py-24 px-6 sm:px-12 md:px-20 lg:px-24 w-[92vw] max-w-[1500px] mx-auto z-20 relative border-t border-neutral-100">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
           <div className="lg:col-span-4 flex flex-col items-start text-left">
-            <span className="font-mono text-sm md:text-base tracking-widest text-neutral-600 font-extrabold mb-1">
+            <span className="font-mono text-sm md:text-base tracking-widest text-[#FF5C00] font-extrabold mb-1">
               // CORE STACK
             </span>
             <h3 className="font-display text-3xl sm:text-4xl text-black font-black uppercase tracking-tight">
@@ -398,7 +398,7 @@ export default function App() {
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
           <div className="lg:col-span-4 flex flex-col items-start text-left">
-            <span className="font-mono text-sm md:text-base tracking-widest text-neutral-600 font-extrabold mb-1">
+            <span className="font-mono text-sm md:text-base tracking-widest text-[#FF5C00] font-extrabold mb-1">
               // JOURNEY
             </span>
             <h3 className="font-display text-3xl sm:text-4xl text-black font-black uppercase tracking-tight">
@@ -452,7 +452,7 @@ export default function App() {
       {/* ================= SECTION 8.5: IMAGE ================= */}
       <div className="w-full z-20 relative pb-12" style={{ paddingLeft: '2in' }}>
         <img 
-          src="/image.png" 
+          src="/image.webp" 
           alt="Shashank Illustration" 
           className="max-w-[400px] w-full h-auto object-contain rounded-lg"
         />
