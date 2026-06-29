@@ -8,7 +8,7 @@ interface InfoDrawerProps {
   initialView?: DrawerState;
 }
 
-type DrawerState = 'menu' | 'about' | 'projects' | 'contact';
+type DrawerState = 'menu' | 'projects' | 'contact';
 
 export const InfoDrawer: React.FC<InfoDrawerProps> = ({ isOpen, onClose, initialView }) => {
   const [view, setView] = useState<DrawerState>('menu');
@@ -22,7 +22,6 @@ export const InfoDrawer: React.FC<InfoDrawerProps> = ({ isOpen, onClose, initial
 
   const menuItems = [
     { label: 'PROJECTS', action: () => setView('projects') },
-    { label: 'ABOUT & TIMELINE', action: () => setView('about') },
     { label: "LET'S WORK", action: () => setView('contact') },
   ];
 
@@ -177,135 +176,52 @@ export const InfoDrawer: React.FC<InfoDrawerProps> = ({ isOpen, onClose, initial
                     </p>
 
                     <div className="flex flex-col gap-6">
-                      {/* Project 1 */}
+                      {/* Project 1: HOMESERVO */}
                       <div className="p-6 bg-white/5 border border-white/5 rounded-lg group hover:border-[#FF5C00]/40 transition-all duration-300">
                         <div className="flex justify-between items-start mb-2">
-                          <h3 className="font-display text-xl text-white group-hover:text-[#FF5C00] transition-colors">
-                            NEON GENESIS COMMERCE
+                          <h3 className="font-display text-xl text-white group-hover:text-[#FF5C00] transition-colors uppercase">
+                            HOME-SERVO
                           </h3>
                           <a href="#" className="text-white/40 hover:text-white transition-colors">
                             <ExternalLink size={18} />
                           </a>
                         </div>
                         <p className="text-white/70 text-sm font-sans mb-4 leading-relaxed">
-                          A high-performance headless WebGL storefront interface engineered with React, Three.js, and complex shader layouts.
+                          A full-stack home services booking platform that connects users with trusted professionals for plumbing, electrical, carpentry, cleaning, and other household services through an intuitive booking experience.
                         </p>
                         <div className="flex flex-wrap gap-2">
                           <span className="text-[10px] font-mono px-2 py-0.5 bg-white/10 rounded text-white/60">React</span>
-                          <span className="text-[10px] font-mono px-2 py-0.5 bg-white/10 rounded text-white/60">Three.js</span>
-                          <span className="text-[10px] font-mono px-2 py-0.5 bg-white/10 rounded text-white/60">WebGL</span>
+                          <span className="text-[10px] font-mono px-2 py-0.5 bg-white/10 rounded text-white/60">Django</span>
+                          <span className="text-[10px] font-mono px-2 py-0.5 bg-white/10 rounded text-white/60">Django REST Framework</span>
+                          <span className="text-[10px] font-mono px-2 py-0.5 bg-white/10 rounded text-white/60">PostgreSQL</span>
                         </div>
                       </div>
 
-                      {/* Project 2 */}
+                      {/* Project 2: XPRESSWASH */}
                       <div className="p-6 bg-white/5 border border-white/5 rounded-lg group hover:border-[#FF5C00]/40 transition-all duration-300">
                         <div className="flex justify-between items-start mb-2">
-                          <h3 className="font-display text-xl text-white group-hover:text-[#FF5C00] transition-colors">
-                            CIPHER CHAT APP
+                          <h3 className="font-display text-xl text-white group-hover:text-[#FF5C00] transition-colors uppercase">
+                            XPRESSWASH
                           </h3>
                           <a href="#" className="text-white/40 hover:text-white transition-colors">
                             <ExternalLink size={18} />
                           </a>
                         </div>
                         <p className="text-white/70 text-sm font-sans mb-4 leading-relaxed">
-                          An end-to-end encrypted chat application designed with custom spring physics micro-interactions and dark-mode aesthetics.
+                          A modern car wash booking platform that streamlines service scheduling, customer management, and appointment workflows with seamless CRM integration for business operations.
                         </p>
                         <div className="flex flex-wrap gap-2">
-                          <span className="text-[10px] font-mono px-2 py-0.5 bg-white/10 rounded text-white/60">TypeScript</span>
-                          <span className="text-[10px] font-mono px-2 py-0.5 bg-white/10 rounded text-white/60">Framer Motion</span>
-                          <span className="text-[10px] font-mono px-2 py-0.5 bg-white/10 rounded text-white/60">Tailwind</span>
-                        </div>
-                      </div>
-
-                      {/* Project 3 */}
-                      <div className="p-6 bg-white/5 border border-white/5 rounded-lg group hover:border-[#FF5C00]/40 transition-all duration-300">
-                        <div className="flex justify-between items-start mb-2">
-                          <h3 className="font-display text-xl text-white group-hover:text-[#FF5C00] transition-colors">
-                            ZENITH BRAND IDENTITY
-                          </h3>
-                          <a href="#" className="text-white/40 hover:text-white transition-colors">
-                            <ExternalLink size={18} />
-                          </a>
-                        </div>
-                        <p className="text-white/70 text-sm font-sans mb-4 leading-relaxed">
-                          Complete dynamic visual identity design system, guidelines, and motion architecture for an evolving Web3 technology startup.
-                        </p>
-                        <div className="flex flex-wrap gap-2">
-                          <span className="text-[10px] font-mono px-2 py-0.5 bg-white/10 rounded text-white/60">Identity</span>
-                          <span className="text-[10px] font-mono px-2 py-0.5 bg-white/10 rounded text-white/60">Motion</span>
-                          <span className="text-[10px] font-mono px-2 py-0.5 bg-white/10 rounded text-white/60">Guidelines</span>
+                          <span className="text-[10px] font-mono px-2 py-0.5 bg-white/10 rounded text-white/60">React</span>
+                          <span className="text-[10px] font-mono px-2 py-0.5 bg-white/10 rounded text-white/60">Supabase</span>
+                          <span className="text-[10px] font-mono px-2 py-0.5 bg-white/10 rounded text-white/60">Zoho CRM</span>
+                          <span className="text-[10px] font-mono px-2 py-0.5 bg-white/10 rounded text-white/60">JavaScript</span>
                         </div>
                       </div>
                     </div>
                   </motion.div>
                 )}
 
-                {/* 3. About & Timeline (Experience / Education) */}
-                {view === 'about' && (
-                  <motion.div
-                    key="about-view"
-                    initial={{ opacity: 0, y: 15 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -15 }}
-                    transition={{ duration: 0.2 }}
-                    className="w-full flex flex-col gap-10"
-                  >
-                    {/* About Section */}
-                    <div>
-                      <h2 className="font-display text-3xl md:text-4xl text-white mb-4 tracking-wide">
-                        ABOUT ME
-                      </h2>
-                      <p className="text-white/80 font-sans text-sm md:text-base leading-relaxed">
-                        I am Shashank, a creative director and freelance designer dedicated to bringing high-contrast, premium aesthetic experiences to life. I specialize in designing and engineering custom interactive frontends that merge visual storytelling with clean, bulletproof typography.
-                      </p>
-                    </div>
 
-                    {/* Experience Timeline */}
-                    <div>
-                      <h3 className="font-mono text-xs text-[#FF5C00] tracking-widest uppercase mb-6 border-b border-white/5 pb-2">
-                        PROFESSIONAL EXPERIENCE
-                      </h3>
-                      <div className="flex flex-col gap-6 pl-4 border-l border-white/10">
-                        {/* Job 1 */}
-                        <div className="relative">
-                          <div className="absolute -left-[21px] top-1.5 w-2 h-2 rounded-full bg-[#FF5C00]" />
-                          <span className="font-mono text-[10px] text-white/40 block">2026 – PRESENT</span>
-                          <h4 className="font-display text-lg text-white">LEAD UI/UX DESIGNER</h4>
-                          <span className="font-mono text-xs text-[#FF5C00] block mb-1">Vortex Creative Lab</span>
-                          <p className="text-white/60 text-xs font-sans leading-relaxed">
-                            Crafted immersive interactive web products and spearheaded typography strategies for high-contrast client projects.
-                          </p>
-                        </div>
-
-                        {/* Job 2 */}
-                        <div className="relative">
-                          <div className="absolute -left-[21px] top-1.5 w-2 h-2 rounded-full bg-[#FF5C00]" />
-                          <span className="font-mono text-[10px] text-white/40 block">2022 – 2024</span>
-                          <h4 className="font-display text-lg text-white">SENIOR WEB DEVELOPER</h4>
-                          <span className="font-mono text-xs text-[#FF5C00] block mb-1">Starlight Solutions</span>
-                          <p className="text-white/60 text-xs font-sans leading-relaxed">
-                            Designed high-performance SaaS web structures, integrating complex transitions, micro-animations, and visual components.
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* Education Section */}
-                    <div>
-                      <h3 className="font-mono text-xs text-[#FF5C00] tracking-widest uppercase mb-6 border-b border-white/5 pb-2">
-                        EDUCATION
-                      </h3>
-                      <div className="flex flex-col gap-6 pl-4 border-l border-white/10">
-                        <div className="relative">
-                          <div className="absolute -left-[21px] top-1.5 w-2 h-2 rounded-full bg-white/40" />
-                          <span className="font-mono text-[10px] text-white/40 block">2018 – 2022</span>
-                          <h4 className="font-display text-lg text-white">B.DES IN COMMUNICATION DESIGN</h4>
-                          <span className="font-mono text-xs text-[#FF5C00] block">Elite Institute of Design</span>
-                        </div>
-                      </div>
-                    </div>
-                  </motion.div>
-                )}
 
                 {/* 4. Let's Work / Contact View */}
                 {view === 'contact' && (

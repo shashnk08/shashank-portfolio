@@ -97,6 +97,7 @@ export default function App() {
 
       {/* Z-30: Sticky Header */}
       <Header
+        onHomeClick={() => scrollToSection('home')}
         onCommissionClick={() => scrollToSection('contact')}
         onArchiveClick={() => scrollToSection('journey')}
         onProcessClick={() => scrollToSection('about')}
@@ -140,7 +141,7 @@ export default function App() {
               transition={{ duration: 0.7, ease: 'easeOut', delay: 0.2 }}
               className="mt-6 text-neutral-600 font-sans text-sm md:text-base max-w-[520px] leading-relaxed font-semibold"
             >
-              I’m Shashank — a software engineer crafting scalable digital products, clean interfaces, and purposeful user experiences.
+              A software engineer crafting scalable digital products, clean interfaces, and purposeful user experiences.
             </motion.p>
 
             {/* Primary Action Button */}
@@ -246,7 +247,7 @@ export default function App() {
               <span className="text-[#FF5C00]">WITH CLARITY</span>
             </h2>
             <p className="mt-8 text-neutral-800 font-sans text-base sm:text-lg md:text-xl max-w-2xl leading-relaxed font-semibold">
-              I’m Shashank — a software engineer focused on building scalable digital products, clean interfaces, and purposeful user experiences. My work sits at the intersection of backend engineering, frontend craft, and product thinking.
+
             </p>
           </div>
 
@@ -399,7 +400,7 @@ export default function App() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
           <div className="lg:col-span-4 flex flex-col items-start text-left">
             <span className="font-mono text-sm md:text-base tracking-widest text-[#FF5C00] font-extrabold mb-1">
-              // JOURNEY
+              // JOURNEY & TRAVEL ROUTE
             </span>
             <h3 className="font-display text-3xl sm:text-4xl text-black font-black uppercase tracking-tight">
               WHAT I’VE BEEN<br />BUILDING
@@ -407,29 +408,67 @@ export default function App() {
           </div>
 
           {/* Timeline Cards */}
-          <div className="lg:col-span-8 flex flex-col gap-10 border-l border-neutral-100 pl-6 sm:pl-8 md:pl-12 ml-2">
-            {/* Item 1 */}
-            <div className="relative">
-              <div className="absolute -left-[31px] sm:-left-[39px] md:-left-[55px] top-1.5 w-3 h-3 rounded-full bg-[#FF5C00] border-2 border-white shadow-sm" />
-              <span className="font-mono text-xs text-neutral-600 font-extrabold block mb-0.5">2026 – PRESENT</span>
-              <h4 className="font-display text-xl sm:text-2xl text-black font-black uppercase">Stalight Technologies</h4>
-              <span className="font-mono text-sm text-[#FF5C00] font-extrabold block mb-2">Software Engineer </span>
-              <ul className="text-neutral-600 font-sans text-sm leading-relaxed flex flex-col gap-2 font-semibold">
-                <li>• Designed robust API endpoints and application workflows using Django and REST Framework.</li>
-                <li>• Iterated on product frontends using React to deliver responsive, interactive modules.</li>
-                <li>• Managed deployment pipelines, testing cycles, and active production code releases.</li>
-              </ul>
+          <div className="lg:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-12 ml-2 w-full">
+            <div className="flex flex-col gap-10">
+              <h4 className="font-mono text-sm font-bold text-[#FF5C00] tracking-widest uppercase mb-6 border-b border-neutral-100 pb-2">
+                Professional Experience
+              </h4>
+              <div className="flex flex-col gap-10 border-l border-neutral-100 pl-6 sm:pl-8 md:pl-12">
+                {/* Item 1 */}
+                <div className="relative">
+                  <div className="absolute -left-[31px] sm:-left-[39px] md:-left-[55px] top-1.5 w-3 h-3 rounded-full bg-[#FF5C00] border-2 border-white shadow-sm" />
+                  <span className="font-mono text-xs text-neutral-600 font-extrabold block mb-0.5">2026 – PRESENT</span>
+                  <h4 className="font-display text-xl sm:text-2xl text-black font-black uppercase">Stalight Technologies</h4>
+                  <span className="font-mono text-sm text-[#FF5C00] font-extrabold block mb-2">Software Engineer </span>
+                  <ul className="text-neutral-600 font-sans text-sm leading-relaxed flex flex-col gap-2 font-semibold">
+                    <li>• Designed robust API endpoints and application workflows using Django and REST Framework.</li>
+                    <li>• Iterated on product frontends using React to deliver responsive, interactive modules.</li>
+                    <li>• Managed deployment pipelines, testing cycles, and active production code releases.</li>
+                  </ul>
+                </div>
+
+                {/* Item 2 */}
+                <div className="relative border-t border-neutral-100 pt-10">
+                  <div className="absolute -left-[31px] sm:-left-[39px] md:-left-[55px] top-[46px] w-3 h-3 rounded-full bg-neutral-300 border-2 border-white shadow-sm" />
+                  <span className="font-mono text-xs text-neutral-600 font-extrabold block mb-0.5">INDEPENDENT</span>
+                  <h4 className="font-display text-xl sm:text-2xl text-black font-black uppercase">Projects & builds</h4>
+                  <span className="font-mono text-sm text-neutral-500 font-extrabold block mb-2">Full-Stack Experimenter</span>
+                  <p className="text-neutral-600 font-sans text-sm leading-relaxed font-semibold">
+                    Built and hosted application, portfolio projects. Focused on marrying complex database states with clean, user-friendly frontend designs.
+                  </p>
+                </div>
+              </div>
             </div>
 
-            {/* Item 2 */}
-            <div className="relative border-t border-neutral-100 pt-10">
-              <div className="absolute -left-[31px] sm:-left-[39px] md:-left-[55px] top-[46px] w-3 h-3 rounded-full bg-neutral-300 border-2 border-white shadow-sm" />
-              <span className="font-mono text-xs text-neutral-600 font-extrabold block mb-0.5">INDEPENDENT</span>
-              <h4 className="font-display text-xl sm:text-2xl text-black font-black uppercase">Projects & builds</h4>
-              <span className="font-mono text-sm text-neutral-500 font-extrabold block mb-2">Full-Stack Experimenter</span>
-              <p className="text-neutral-600 font-sans text-sm leading-relaxed font-semibold">
-                Built and hosted application, portfolio projects. Focused on marrying complex database states with clean, user-friendly frontend designs.
-              </p>
+            <div className="flex flex-col gap-10">
+              <h4 className="font-mono text-sm font-bold text-[#FF5C00] tracking-widest uppercase mb-6 border-b border-neutral-100 pb-2">
+                Education
+              </h4>
+              <div className="flex flex-col gap-10 border-l border-neutral-100 pl-6 sm:pl-8 md:pl-12">
+                {/* Edu Item 1 */}
+                <div className="relative">
+                  <div className="absolute -left-[31px] sm:-left-[39px] md:-left-[55px] top-1.5 w-3 h-3 rounded-full bg-neutral-300 border-2 border-white shadow-sm" />
+                  <span className="font-mono text-xs text-neutral-600 font-extrabold block mb-0.5">2022 – 2026</span>
+                  <h4 className="font-display text-xl sm:text-2xl text-black font-black uppercase">AMC Engineering College</h4>
+                  <span className="font-mono text-sm text-neutral-500 font-extrabold block">Bachelor of Engineering</span>
+                </div>
+
+                {/* Edu Item 2 */}
+                <div className="relative border-t border-neutral-100 pt-10">
+                  <div className="absolute -left-[31px] sm:-left-[39px] md:-left-[55px] top-[46px] w-3 h-3 rounded-full bg-neutral-300 border-2 border-white shadow-sm" />
+                  <span className="font-mono text-xs text-neutral-600 font-extrabold block mb-0.5">2020 – 2022</span>
+                  <h4 className="font-display text-xl sm:text-2xl text-black font-black uppercase">Jnanodaya PU College</h4>
+                  <span className="font-mono text-sm text-neutral-500 font-extrabold block">PCMB (80%)</span>
+                </div>
+
+                {/* Edu Item 3 */}
+                <div className="relative border-t border-neutral-100 pt-10">
+                  <div className="absolute -left-[31px] sm:-left-[39px] md:-left-[55px] top-[46px] w-3 h-3 rounded-full bg-neutral-300 border-2 border-white shadow-sm" />
+                  <span className="font-mono text-xs text-neutral-600 font-extrabold block mb-0.5">2017 – 2020</span>
+                  <h4 className="font-display text-xl sm:text-2xl text-black font-black uppercase">Vijaya High School</h4>
+                  <span className="font-mono text-sm text-neutral-500 font-extrabold block">Secondary Education</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -437,8 +476,8 @@ export default function App() {
 
 
       {/* ================= SECTION 8: PERSONAL NOTE ================= */}
-      <section className="py-24 px-6 sm:px-12 md:px-20 lg:px-24 w-[92vw] max-w-[1500px] mx-auto z-20 relative">
-        <div className="border-t border-neutral-100 pt-16">
+      <section className="pt-0 pb-12 px-6 sm:px-12 md:px-20 lg:px-24 w-[92vw] max-w-[1500px] mx-auto z-20 relative">
+        <div className="border-t border-neutral-100 pt-8">
           <div className="flex flex-col items-start">
             <span className="font-mono text-sm text-[#FF5C00] font-extrabold mb-1">// PERSONAL NOTE</span>
             <h3 className="font-display text-2xl sm:text-3xl text-black font-black uppercase mb-4">Beyond the code</h3>
@@ -451,47 +490,52 @@ export default function App() {
 
       {/* ================= SECTION 8.5: IMAGE ================= */}
       <div className="w-full z-20 relative pb-12" style={{ paddingLeft: '2in' }}>
-        <img 
-          src="/image.webp" 
-          alt="Shashank Illustration" 
+        <img
+          src="/image.webp"
+          alt="Shashank Illustration"
           className="max-w-[400px] w-full h-auto object-contain rounded-lg"
         />
       </div>
 
       {/* ================= SECTION 9: CTA FOOTER ================= */}
-      <section id="contact" className="pt-24 pb-12 px-6 sm:px-12 md:px-20 lg:px-24 bg-neutral-950 text-white z-20 relative w-full border-t border-neutral-800">
-        <div className="w-[92vw] max-w-[1500px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      <section id="contact" className="pt-16 pb-8 px-6 sm:px-12 md:px-20 lg:px-24 bg-neutral-950 text-white z-20 relative w-full border-t border-neutral-800">
+        <div className="w-[92vw] max-w-[1500px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
           <div className="lg:col-span-8 flex flex-col items-start text-left">
-            <span className="font-mono text-sm tracking-widest text-[#FF5C00] font-extrabold mb-1">
+            <span className="font-mono text-xs tracking-widest text-[#FF5C00] font-extrabold mb-1">
               // LET'S CONNECT
             </span>
-            <h2 className="font-display leading-[0.85] text-white text-[45px] sm:text-[60px] md:text-[80px] lg:text-[90px] xl:text-[100px] uppercase font-black tracking-tighter">
-              LET’S BUILD<br />
-              <span className="text-[#FF5C00]">SOMETHING MEANINGFUL</span>
+            <h2 className="font-display leading-[0.85] text-white text-[35px] sm:text-[48px] md:text-[60px] lg:text-[72px] xl:text-[80px] uppercase font-black tracking-tighter">
+              BUILD<br />
+              <span className="text-[#FF5C00]">SOMETHING<br />MEANINGFUL</span>
             </h2>
-            <p className="mt-6 text-neutral-400 font-sans text-sm sm:text-base max-w-xl leading-relaxed">
+            <p className="mt-4 text-neutral-400 font-sans text-xs sm:text-sm max-w-lg leading-relaxed">
               If you’re working on a product, platform, or idea that needs thoughtful engineering and clean execution, I’d love to connect and see how I can help.
             </p>
           </div>
 
-          <div className="lg:col-span-4 flex flex-col sm:flex-row lg:flex-col items-start lg:items-end gap-4 w-full">
+          <div className="lg:col-span-4 flex flex-col sm:flex-row lg:flex-col items-start lg:items-end gap-3 w-full">
             <a
               href="mailto:shashankgs082004@gmail.com"
-              className="bg-[#FF5C00] text-black font-mono font-bold text-xs tracking-widest text-center px-8 py-4 rounded-full hover:bg-white hover:text-black transition-all duration-300 w-full sm:w-auto lg:w-full max-w-xs shadow-md"
+              className="bg-[#FF5C00] text-black font-mono font-bold text-[10px] tracking-widest text-center px-6 py-3 rounded-full hover:bg-white hover:text-black transition-all duration-300 w-full sm:w-auto lg:w-full max-w-xs shadow-md"
             >
               LET'S TALK
             </a>
             <button
               onClick={() => openDrawerWithView('projects')}
-              className="bg-transparent border border-white/20 text-white font-mono font-bold text-xs tracking-widest text-center px-8 py-4 rounded-full hover:bg-white hover:text-black transition-all duration-300 w-full sm:w-auto lg:w-full max-w-xs"
+              className="bg-transparent border border-white/20 text-white font-mono font-bold text-[10px] tracking-widest text-center px-6 py-3 rounded-full hover:bg-white hover:text-black transition-all duration-300 w-full sm:w-auto lg:w-full max-w-xs"
             >
               VIEW PROJECTS
             </button>
           </div>
         </div>
 
-        <div className="w-[92vw] max-w-[1500px] mx-auto border-t border-white/5 mt-16 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-neutral-500 font-mono text-[10px]">
-          <span>© 2026 SHASHANK G S. ALL INTENT PRESERVED.</span>
+        <div className="w-[92vw] max-w-[1500px] mx-auto border-t border-white/5 mt-10 pt-6 flex flex-col sm:flex-row justify-between items-center gap-4 text-neutral-500 font-mono text-[10px]">
+          <span 
+            className="cursor-pointer hover:text-white transition-colors" 
+            onClick={() => scrollToSection('home')}
+          >
+            © 2026 SHASHANK G S. ALL INTENT PRESERVED.
+          </span>
           <div className="flex gap-4">
             <a href="https://github.com/shashnk08" className="hover:text-white transition-colors">GITHUB</a>
             <a href="https://www.linkedin.com/in/shashank-g-s-a2b425225/" className="hover:text-white transition-colors">LINKEDIN</a>
