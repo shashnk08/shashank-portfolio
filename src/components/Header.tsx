@@ -58,7 +58,7 @@ export const Header: React.FC<HeaderProps> = ({
   };
 
   return (
-    <header ref={headerRef} className="fixed top-0 left-0 w-full z-50 px-6 py-4 md:px-12 md:py-6 flex justify-between items-center backdrop-blur-md bg-white/40 border-b border-black/5">
+    <header ref={headerRef} className="fixed top-0 left-0 w-full z-50 px-6 py-4 md:px-12 md:py-6 flex justify-between items-center backdrop-blur-md bg-white/40">
       {/* Logo Group */}
       <div className="flex items-center gap-3 group cursor-pointer" onClick={onHomeClick}>
         <span className="font-display text-2xl md:text-3xl tracking-widest text-black">

@@ -109,7 +109,7 @@ export default function App() {
         <div className="w-full grid grid-cols-1 lg:grid-cols-12 gap-0 lg:gap-4 items-end">
 
           {/* Left Column: Software Engineer Copy & CTAs */}
-          <div className="lg:col-span-5 flex flex-col items-start text-left select-none z-20 pb-0 lg:pb-24">
+          <div className="lg:col-span-5 flex flex-col items-start text-left select-none z-20 pb-0 lg:pb-24 order-2 lg:order-1">
             {/* Top Label */}
             <motion.span
               initial={{ opacity: 0, y: 15 }}
@@ -128,8 +128,8 @@ export default function App() {
               className="font-display leading-[0.8] text-black text-[64px] sm:text-[80px] md:text-[100px] lg:text-[108px] xl:text-[120px] uppercase flex flex-col"
             >
               <span className="text-neutral-950 tracking-tight">ENGINEERED</span>
-              <span className="text-neutral-950 tracking-tight -mt-[2%] sm:-mt-[3%]">WITH</span>
-              <span className="text-[#FF5C00] text-stroke-black tracking-tight text-[72px] sm:text-[90px] md:text-[115px] lg:text-[128px] xl:text-[145px] drop-shadow-[0_1.5px_2px_rgba(0,0,0,0.15)] -mt-[1%] sm:-mt-[2%]">
+              <span className="text-neutral-950 tracking-tight mt-1 sm:mt-2">WITH</span>
+              <span className="text-[#FF5C00] text-stroke-black tracking-tight text-[72px] sm:text-[90px] md:text-[115px] lg:text-[128px] xl:text-[145px] mt-1 sm:mt-2">
                 <ScrambleText text={headlinePhrases[headlineIndex]} />
               </span>
             </motion.h1>
@@ -203,7 +203,7 @@ export default function App() {
           </div>
 
           {/* Right Column: Hero Portrait, Accent shapes */}
-          <div className="lg:col-span-7 relative flex justify-center lg:justify-end items-end h-[55vh] lg:h-[88vh] min-h-[380px] lg:min-h-[680px] w-full select-none overflow-visible -mt-4 lg:mt-0">
+          <div className="lg:col-span-7 relative flex justify-center lg:justify-end items-end h-[55vh] lg:h-[88vh] min-h-[380px] lg:min-h-[680px] w-full select-none overflow-visible -mt-16 sm:-mt-20 lg:mt-0 order-1 lg:order-2">
 
             {/* Top-Right Info Accent */}
             <div className="absolute top-[8%] right-[5%] z-20 font-mono text-[10px] sm:text-xs text-neutral-400 tracking-widest text-right select-none leading-relaxed hidden sm:block">
@@ -242,7 +242,7 @@ export default function App() {
             <span className="font-mono text-base md:text-lg tracking-widest text-neutral-600 font-extrabold mb-1">
               // ABOUT ME
             </span>
-            <h2 className="font-display leading-[0.85] text-black text-[50px] sm:text-[70px] md:text-[85px] lg:text-[100px] uppercase font-black tracking-tighter">
+            <h2 className="font-display leading-none text-black text-[50px] sm:text-[70px] md:text-[85px] lg:text-[100px] uppercase tracking-tight">
               BUILDING SYSTEMS<br />
               <span className="text-[#FF5C00]">WITH CLARITY</span>
             </h2>
@@ -275,7 +275,7 @@ export default function App() {
       <section className="py-10 sm:py-12 px-6 sm:px-12 md:px-20 lg:px-24 w-[92vw] max-w-[1500px] mx-auto z-20 relative bg-neutral-50/50 rounded-3xl border border-neutral-100">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-6 items-start w-full">
           <div className="lg:col-span-3 pb-4 lg:pb-0">
-            <h3 className="font-display text-3xl sm:text-4xl 2xl:text-5xl text-black font-black uppercase tracking-tight">
+            <h3 className="font-display text-3xl sm:text-4xl 2xl:text-5xl text-black uppercase tracking-tight">
               WHO I AM
             </h3>
           </div>
@@ -310,7 +310,7 @@ export default function App() {
               {/* Card 1 */}
               <div className="flex flex-col items-start p-2 hover:translate-y-[-4px] transition-transform duration-300">
                 <span className="font-mono text-sm text-[#FF5C00] font-bold mb-3">// BACKEND</span>
-                <h4 className="font-display text-xl sm:text-2xl font-black text-black uppercase mb-4">Backend Engineering</h4>
+                <h4 className="font-display text-xl sm:text-2xl text-black uppercase mb-4">Backend Engineering</h4>
                 <ul className="text-neutral-700 font-mono text-xs sm:text-sm flex flex-col gap-2.5">
                   <li>• Django / Django REST Framework</li>
                   <li>• PostgreSQL & Database architecture</li>
@@ -322,7 +322,7 @@ export default function App() {
               {/* Card 2 */}
               <div className="flex flex-col items-start p-2 hover:translate-y-[-4px] transition-transform duration-300 border-t md:border-t-0 md:border-l border-neutral-100 pt-8 md:pt-0 md:pl-8">
                 <span className="font-mono text-sm text-[#FF5C00] font-bold mb-3">// FRONTEND</span>
-                <h4 className="font-display text-xl sm:text-2xl font-black text-black uppercase mb-4">Frontend Development</h4>
+                <h4 className="font-display text-xl sm:text-2xl text-black uppercase mb-4">Frontend Development</h4>
                 <ul className="text-neutral-700 font-mono text-xs sm:text-sm flex flex-col gap-2.5">
                   <li>• React & modern state management</li>
                   <li>• TypeScript / JavaScript logic</li>
@@ -334,7 +334,7 @@ export default function App() {
               {/* Card 3 */}
               <div className="flex flex-col items-start p-2 hover:translate-y-[-4px] transition-transform duration-300 border-t md:border-t-0 md:border-l border-neutral-100 pt-8 md:pt-0 md:pl-8">
                 <span className="font-mono text-sm text-[#FF5C00] font-bold mb-3">// CLOUD</span>
-                <h4 className="font-display text-xl sm:text-2xl font-black text-black uppercase mb-4">Cloud & Deployment</h4>
+                <h4 className="font-display text-xl sm:text-2xl text-black uppercase mb-4">Cloud & Deployment</h4>
                 <ul className="text-neutral-700 font-mono text-xs sm:text-sm flex flex-col gap-2.5">
                   <li>• Cloud hosting on AWS & DigitalOcean</li>
                   <li>• Dockerized application deployment</li>
@@ -351,7 +351,7 @@ export default function App() {
                 <span className="font-mono text-sm md:text-base tracking-widest text-[#FF5C00] font-extrabold mb-1">
               // CORE STACK
                 </span>
-                <h3 className="font-display text-3xl sm:text-4xl text-black font-black uppercase tracking-tight">
+                <h3 className="font-display text-3xl sm:text-4xl text-black uppercase tracking-tight">
                   TOOLS I<br />BUILD WITH
                 </h3>
               </div>
@@ -416,7 +416,7 @@ export default function App() {
                 <span className="font-mono text-sm md:text-base tracking-widest text-[#FF5C00] font-extrabold mb-1">
               // JOURNEY & TRAVEL ROUTE
                 </span>
-                <h3 className="font-display text-3xl sm:text-4xl text-black font-black uppercase tracking-tight">
+                <h3 className="font-display text-3xl sm:text-4xl text-black uppercase tracking-tight">
                   WHAT I’VE BEEN<br />BUILDING
                 </h3>
               </div>
@@ -432,7 +432,7 @@ export default function App() {
                     <div className="relative">
                       <div className="absolute -left-[31px] sm:-left-[39px] md:-left-[55px] top-1.5 w-3 h-3 rounded-full bg-[#FF5C00] border-2 border-white shadow-sm" />
                       <span className="font-mono text-xs text-neutral-600 font-extrabold block mb-0.5">2026 – PRESENT</span>
-                      <h4 className="font-display text-xl sm:text-2xl text-black font-black uppercase">Stalight Technologies</h4>
+                      <h4 className="font-display text-xl sm:text-2xl text-black uppercase">Stalight Technologies</h4>
                       <span className="font-mono text-sm text-[#FF5C00] font-extrabold block mb-2">Software Engineer </span>
                       <ul className="text-neutral-600 font-sans text-sm leading-relaxed flex flex-col gap-2 font-semibold">
                         <li>• Designed robust API endpoints and application workflows using Django and REST Framework.</li>
@@ -445,7 +445,7 @@ export default function App() {
                     <div className="relative border-t border-neutral-100 pt-10">
                       <div className="absolute -left-[31px] sm:-left-[39px] md:-left-[55px] top-[46px] w-3 h-3 rounded-full bg-neutral-300 border-2 border-white shadow-sm" />
                       <span className="font-mono text-xs text-neutral-600 font-extrabold block mb-0.5">INDEPENDENT</span>
-                      <h4 className="font-display text-xl sm:text-2xl text-black font-black uppercase">Projects & builds</h4>
+                      <h4 className="font-display text-xl sm:text-2xl text-black uppercase">Projects & builds</h4>
                       <span className="font-mono text-sm text-neutral-500 font-extrabold block mb-2">Full-Stack Experimenter</span>
                       <p className="text-neutral-600 font-sans text-sm leading-relaxed font-semibold">
                         Built and hosted application, portfolio projects. Focused on marrying complex database states with clean, user-friendly frontend designs.
@@ -463,7 +463,7 @@ export default function App() {
                     <div className="relative">
                       <div className="absolute -left-[31px] sm:-left-[39px] md:-left-[55px] top-1.5 w-3 h-3 rounded-full bg-neutral-300 border-2 border-white shadow-sm" />
                       <span className="font-mono text-xs text-neutral-600 font-extrabold block mb-0.5">2022 – 2026</span>
-                      <h4 className="font-display text-xl sm:text-2xl text-black font-black uppercase">AMC Engineering College</h4>
+                      <h4 className="font-display text-xl sm:text-2xl text-black uppercase">AMC Engineering College</h4>
                       <span className="font-mono text-sm text-neutral-500 font-extrabold block">Bachelor of Engineering</span>
                     </div>
 
@@ -471,7 +471,7 @@ export default function App() {
                     <div className="relative border-t border-neutral-100 pt-10">
                       <div className="absolute -left-[31px] sm:-left-[39px] md:-left-[55px] top-[46px] w-3 h-3 rounded-full bg-neutral-300 border-2 border-white shadow-sm" />
                       <span className="font-mono text-xs text-neutral-600 font-extrabold block mb-0.5">2020 – 2022</span>
-                      <h4 className="font-display text-xl sm:text-2xl text-black font-black uppercase">Jnanodaya PU College</h4>
+                      <h4 className="font-display text-xl sm:text-2xl text-black uppercase">Jnanodaya PU College</h4>
                       <span className="font-mono text-sm text-neutral-500 font-extrabold block">PCMB (80%)</span>
                     </div>
 
@@ -479,7 +479,7 @@ export default function App() {
                     <div className="relative border-t border-neutral-100 pt-10">
                       <div className="absolute -left-[31px] sm:-left-[39px] md:-left-[55px] top-[46px] w-3 h-3 rounded-full bg-neutral-300 border-2 border-white shadow-sm" />
                       <span className="font-mono text-xs text-neutral-600 font-extrabold block mb-0.5">2017 – 2020</span>
-                      <h4 className="font-display text-xl sm:text-2xl text-black font-black uppercase">Vijaya High School</h4>
+                      <h4 className="font-display text-xl sm:text-2xl text-black uppercase">Vijaya High School</h4>
                       <span className="font-mono text-sm text-neutral-500 font-extrabold block">Secondary Education</span>
                     </div>
                   </div>
@@ -494,7 +494,7 @@ export default function App() {
             <div className="border-t border-neutral-100 pt-8">
               <div className="flex flex-col items-start">
                 <span className="font-mono text-sm text-[#FF5C00] font-extrabold mb-1">// PERSONAL NOTE</span>
-                <h3 className="font-display text-2xl sm:text-3xl text-black font-black uppercase mb-4">Beyond the code</h3>
+                <h3 className="font-display text-2xl sm:text-3xl text-black uppercase mb-4">Beyond the code</h3>
                 <p className="text-neutral-600 font-sans text-sm sm:text-base leading-relaxed font-semibold max-w-3xl">
                   When I’m not building, you’ll probably find me sketching, cooking, catching up on sleep, or just enjoying life outside the screen.
                 </p>
@@ -518,7 +518,7 @@ export default function App() {
                 <span className="font-mono text-xs tracking-widest text-[#FF5C00] font-extrabold mb-1">
               // LET'S CONNECT
                 </span>
-                <h2 className="font-display leading-[0.85] text-white text-[35px] sm:text-[48px] md:text-[60px] lg:text-[72px] xl:text-[80px] uppercase font-black tracking-tighter">
+                <h2 className="font-display leading-[0.95] text-white text-[35px] sm:text-[48px] md:text-[60px] lg:text-[72px] xl:text-[80px] uppercase tracking-tight">
                   BUILD<br />
                   <span className="text-[#FF5C00]">SOMETHING<br />MEANINGFUL</span>
                 </h2>
