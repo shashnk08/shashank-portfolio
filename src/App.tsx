@@ -125,11 +125,11 @@ export default function App() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, ease: 'easeOut', delay: 0.1 }}
-              className="font-display leading-[0.82] text-black text-[64px] sm:text-[80px] md:text-[100px] lg:text-[108px] xl:text-[120px] uppercase flex flex-col"
+              className="font-display leading-[0.8] text-black text-[64px] sm:text-[80px] md:text-[100px] lg:text-[108px] xl:text-[120px] uppercase flex flex-col"
             >
-              <span className="text-neutral-950 tracking-normal">ENGINEERED</span>
-              <span className="text-neutral-950 tracking-normal">WITH</span>
-              <span className="text-[#FF5C00] text-stroke-black tracking-normal text-[72px] sm:text-[90px] md:text-[115px] lg:text-[128px] xl:text-[145px] drop-shadow-[0_1.5px_2px_rgba(0,0,0,0.15)] mt-1">
+              <span className="text-neutral-950 tracking-tight">ENGINEERED</span>
+              <span className="text-neutral-950 tracking-tight -mt-[2%] sm:-mt-[3%]">WITH</span>
+              <span className="text-[#FF5C00] text-stroke-black tracking-tight text-[72px] sm:text-[90px] md:text-[115px] lg:text-[128px] xl:text-[145px] drop-shadow-[0_1.5px_2px_rgba(0,0,0,0.15)] -mt-[1%] sm:-mt-[2%]">
                 <ScrambleText text={headlinePhrases[headlineIndex]} />
               </span>
             </motion.h1>
