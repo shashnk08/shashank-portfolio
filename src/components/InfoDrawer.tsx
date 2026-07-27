@@ -63,15 +63,8 @@ export const InfoDrawer: React.FC<InfoDrawerProps> = ({ isOpen, onClose, initial
             {/* Sticky Header */}
             <div className="sticky top-0 bg-[#222222]/95 backdrop-blur-md z-10 px-8 py-6 border-b border-white/5 flex items-center justify-between">
               <div>
-                {view !== 'menu' ? (
-                  <button
-                    onClick={handleBack}
-                    className="flex items-center gap-2 font-mono text-xs text-[#FF5C00] hover:text-white transition-colors uppercase tracking-widest cursor-pointer"
-                  >
-                    <ArrowLeft size={16} /> BACK
-                  </button>
-                ) : (
-                  <span className="font-mono text-xs text-white/40 tracking-widest">
+                {view === 'menu' && (
+                  <span className="font-mono text-xs text-white/40 tracking-widest uppercase">
                     NAVIGATION
                   </span>
                 )}
@@ -79,10 +72,10 @@ export const InfoDrawer: React.FC<InfoDrawerProps> = ({ isOpen, onClose, initial
 
               <button
                 onClick={onClose}
-                className="text-white/70 hover:text-[#FF5C00] transition-colors p-2 hover:bg-white/5 rounded-full cursor-pointer"
+                className="text-black bg-[#FF5C00] hover:bg-white transition-colors p-2 rounded-full cursor-pointer shadow-md flex items-center justify-center"
                 aria-label="Close drawer"
               >
-                <X size={20} />
+                <X size={20} strokeWidth={2.5} />
               </button>
             </div>
 
@@ -182,9 +175,6 @@ export const InfoDrawer: React.FC<InfoDrawerProps> = ({ isOpen, onClose, initial
                           <h3 className="font-display text-xl text-white group-hover:text-[#FF5C00] transition-colors uppercase">
                             HOME-SERVO
                           </h3>
-                          <a href="#" className="text-white/40 hover:text-white transition-colors">
-                            <ExternalLink size={18} />
-                          </a>
                         </div>
                         <p className="text-white/70 text-sm font-sans mb-4 leading-relaxed">
                           A full-stack home services booking platform that connects users with trusted professionals for plumbing, electrical, carpentry, cleaning, and other household services through an intuitive booking experience.
@@ -203,7 +193,7 @@ export const InfoDrawer: React.FC<InfoDrawerProps> = ({ isOpen, onClose, initial
                           <h3 className="font-display text-xl text-white group-hover:text-[#FF5C00] transition-colors uppercase">
                             XPRESSWASH
                           </h3>
-                          <a href="#" className="text-white/40 hover:text-white transition-colors">
+                          <a href="https://xpresswash.in/" target="_blank" rel="noopener noreferrer" className="text-white/40 hover:text-white transition-colors">
                             <ExternalLink size={18} />
                           </a>
                         </div>

@@ -76,7 +76,7 @@ export default function App() {
   };
 
   return (
-    <div className="relative min-h-screen w-full flex flex-col bg-white text-black font-sans selection:bg-[#FF5C00] selection:text-black overflow-y-auto scroll-smooth">
+    <div className="relative min-h-screen w-full flex flex-col bg-white text-black font-sans selection:bg-[#FF5C00] selection:text-black overflow-x-hidden overflow-y-auto scroll-smooth">
 
       {/* 1. Background Division (Light Gray Polygon at Bottom of Hero) */}
       <div
@@ -106,10 +106,10 @@ export default function App() {
 
       {/* ================= SECTION 1: HERO SECTION ================= */}
       <main id="home" className="min-h-screen w-full flex flex-col justify-end items-center relative z-20 px-6 sm:px-10 md:px-12 pt-28 pb-0 w-[92vw] max-w-[1500px] mx-auto">
-        <div className="w-full grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-4 items-end">
+        <div className="w-full grid grid-cols-1 lg:grid-cols-12 gap-0 lg:gap-4 items-end">
 
           {/* Left Column: Software Engineer Copy & CTAs */}
-          <div className="lg:col-span-5 flex flex-col items-start text-left select-none z-20 pb-16 lg:pb-24">
+          <div className="lg:col-span-5 flex flex-col items-start text-left select-none z-20 pb-0 lg:pb-24">
             {/* Top Label */}
             <motion.span
               initial={{ opacity: 0, y: 15 }}
@@ -167,7 +167,7 @@ export default function App() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="mt-12 flex items-center gap-3"
+              className="mt-6 lg:mt-12 flex items-center gap-3"
             >
               <a
                 href="https://github.com/shashnk08"
@@ -203,7 +203,7 @@ export default function App() {
           </div>
 
           {/* Right Column: Hero Portrait, Accent shapes */}
-          <div className="lg:col-span-7 relative flex justify-center lg:justify-end items-end h-[75vh] lg:h-[88vh] min-h-[500px] lg:min-h-[680px] w-full select-none overflow-visible">
+          <div className="lg:col-span-7 relative flex justify-center lg:justify-end items-end h-[55vh] lg:h-[88vh] min-h-[380px] lg:min-h-[680px] w-full select-none overflow-visible -mt-16 lg:mt-0">
 
             {/* Top-Right Info Accent */}
             <div className="absolute top-[8%] right-[5%] z-20 font-mono text-[10px] sm:text-xs text-neutral-400 tracking-widest text-right select-none leading-relaxed hidden sm:block">
@@ -213,7 +213,7 @@ export default function App() {
             </div>
 
             {/* Neon Lime Asterisk shape behind portrait */}
-            <img src="/asterisk.svg" alt="asterisk" className="absolute right-[15%] bottom-[28%] w-64 h-64 sm:w-80 sm:h-80 lg:w-[360px] lg:h-[360px] opacity-100 rotate-[12deg] z-0 pointer-events-none" />
+            <img src="/asterisk.svg" alt="asterisk" className="absolute -right-[10%] lg:right-[15%] bottom-[28%] w-64 h-64 sm:w-80 sm:h-80 lg:w-[360px] lg:h-[360px] opacity-100 rotate-[12deg] z-0 pointer-events-none" />
 
             {/* The Main Portrait Image */}
             <motion.img
@@ -222,7 +222,7 @@ export default function App() {
               transition={{ duration: 0.8, ease: 'easeOut', delay: 0.15 }}
               src="/image copy.webp"
               alt="Shashank Portrait"
-              className="relative z-10 h-[75vh] lg:h-[88vh] w-auto object-contain filter grayscale contrast-110 brightness-95 lg:mr-[10%]"
+              className="relative z-10 h-[55vh] lg:h-[88vh] w-auto object-contain filter grayscale contrast-110 brightness-95 lg:mr-[10%]"
             />
 
           </div>
@@ -305,8 +305,8 @@ export default function App() {
       </section>
 
       {/* ================= SECTION 4: WHAT I DO (Expertise Strip) ================= */}
-          <section className="py-14 sm:py-16 px-6 sm:px-12 md:px-20 lg:px-24 w-[92vw] max-w-[1500px] mx-auto z-20 relative">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 border-t border-neutral-100 pt-16">
+          <section className="py-8 sm:py-10 px-6 sm:px-12 md:px-20 lg:px-24 w-[92vw] max-w-[1500px] mx-auto z-20 relative">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 border-t border-neutral-100 pt-8">
               {/* Card 1 */}
               <div className="flex flex-col items-start p-2 hover:translate-y-[-4px] transition-transform duration-300">
                 <span className="font-mono text-sm text-[#FF5C00] font-bold mb-3">// BACKEND</span>

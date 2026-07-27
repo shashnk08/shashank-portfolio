@@ -37,7 +37,7 @@
   color: #000000;
 }
 
-body {
+html, body {
   background-color: #FFFFFF;
   color: #000000;
   margin: 0;
