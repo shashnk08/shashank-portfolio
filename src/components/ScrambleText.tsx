@@ -4,7 +4,7 @@ interface ScrambleTextProps {
   text: string;
 }
 
-const CHARS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*()_+{}|:"<>?';
+const CHARS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 
 export const ScrambleText: React.FC<ScrambleTextProps> = ({ text }) => {
   const [displayText, setDisplayText] = useState(text);
