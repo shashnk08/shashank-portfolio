@@ -80,7 +80,7 @@ export default function App() {
 
       {/* 1. Background Division (Light Gray Polygon at Bottom of Hero) */}
       <div
-        className="absolute top-0 left-0 right-0 h-screen bg-[#F5F5F5] pointer-events-none z-0"
+        className="absolute top-0 left-0 right-0 h-[100dvh] bg-[#F5F5F5] pointer-events-none z-0"
         style={{ clipPath: 'polygon(0 80%, 100% 60%, 100% 100%, 0 100%)' }}
       />
 
@@ -105,7 +105,7 @@ export default function App() {
       />
 
       {/* ================= SECTION 1: HERO SECTION ================= */}
-      <main id="home" className="min-h-screen w-full flex flex-col justify-end items-center relative z-20 px-6 sm:px-10 md:px-12 pt-28 pb-0 w-[92vw] max-w-[1500px] mx-auto">
+      <main id="home" className="min-[100dvh] w-full flex flex-col justify-end items-center relative z-20 px-6 sm:px-10 md:px-12 pt-28 pb-12 lg:pb-0 w-[92vw] max-w-[1500px] mx-auto">
         <div className="w-full grid grid-cols-1 lg:grid-cols-12 gap-0 lg:gap-4 items-end">
 
           {/* Left Column: Software Engineer Copy & CTAs */}
@@ -203,7 +203,7 @@ export default function App() {
           </div>
 
           {/* Right Column: Hero Portrait, Accent shapes */}
-          <div className="lg:col-span-7 relative flex justify-center lg:justify-end items-end h-[55vh] lg:h-[88vh] min-h-[380px] lg:min-h-[680px] w-full select-none overflow-visible -mt-16 lg:mt-0">
+          <div className="lg:col-span-7 relative flex justify-center lg:justify-end items-end h-[55vh] lg:h-[88vh] min-h-[380px] lg:min-h-[680px] w-full select-none overflow-visible -mt-4 lg:mt-0">
 
             {/* Top-Right Info Accent */}
             <div className="absolute top-[8%] right-[5%] z-20 font-mono text-[10px] sm:text-xs text-neutral-400 tracking-widest text-right select-none leading-relaxed hidden sm:block">
