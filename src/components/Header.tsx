@@ -29,7 +29,7 @@ export const Header: React.FC<HeaderProps> = ({
 
     // Use capture phase to catch scrolls on any container, like the main app wrapper
     window.addEventListener('scroll', handleScroll, { passive: true, capture: true });
-    
+
     return () => {
       window.removeEventListener('scroll', handleScroll, { capture: true } as any);
     };
@@ -62,11 +62,8 @@ export const Header: React.FC<HeaderProps> = ({
       {/* Logo Group */}
       <div className="flex items-center gap-3 group cursor-pointer" onClick={onHomeClick}>
         <span className="font-display text-2xl md:text-3xl tracking-widest text-black">
-          SHASHANK
+          SHASHANK G S
         </span>
-        <div className="w-8 h-8 md:w-10 md:h-10 bg-[#FF5C00] text-black rounded-full flex items-center justify-center font-bold transition-transform duration-500 ease-out group-hover:rotate-180">
-          <span className="text-lg md:text-xl">✦</span>
-        </div>
       </div>
 
       {/* Desktop Nav */}
