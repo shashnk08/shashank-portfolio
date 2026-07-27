@@ -105,7 +105,7 @@ export default function App() {
       />
 
       {/* ================= SECTION 1: HERO SECTION ================= */}
-      <main id="home" className="min-[100dvh] w-full flex flex-col justify-end items-center relative z-20 px-6 sm:px-10 md:px-12 pt-28 pb-12 lg:pb-0 w-[92vw] max-w-[1500px] mx-auto">
+      <main id="home" className="min-[100dvh] w-full flex flex-col justify-end items-center relative z-20 px-6 sm:px-10 md:px-12 pt-20 lg:pt-28 pb-12 lg:pb-0 w-[92vw] max-w-[1500px] mx-auto">
         <div className="w-full grid grid-cols-1 lg:grid-cols-12 gap-0 lg:gap-4 items-end">
 
           {/* Left Column: Software Engineer Copy & CTAs */}
@@ -128,8 +128,8 @@ export default function App() {
               className="font-display leading-[0.8] text-black text-[64px] sm:text-[80px] md:text-[100px] lg:text-[108px] xl:text-[120px] uppercase flex flex-col"
             >
               <span className="text-neutral-950 tracking-tight">ENGINEERED</span>
-              <span className="text-neutral-950 tracking-tight mt-1 sm:mt-2">WITH</span>
-              <span className="text-[#FF5C00] text-stroke-black tracking-tight text-[72px] sm:text-[90px] md:text-[115px] lg:text-[128px] xl:text-[145px] mt-1 sm:mt-2">
+              <span className="text-neutral-950 tracking-tight mt-2 sm:mt-4">WITH</span>
+              <span className="text-[#FF5C00] text-stroke-black tracking-tight text-[72px] sm:text-[90px] md:text-[115px] lg:text-[128px] xl:text-[145px] mt-2 sm:mt-4">
                 <ScrambleText text={headlinePhrases[headlineIndex]} />
               </span>
             </motion.h1>
