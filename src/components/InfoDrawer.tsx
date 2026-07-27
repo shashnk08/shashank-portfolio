@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, ArrowLeft, ExternalLink } from 'lucide-react';
+import { X, ExternalLink } from 'lucide-react';
 
 interface InfoDrawerProps {
   isOpen: boolean;
@@ -32,9 +32,6 @@ export const InfoDrawer: React.FC<InfoDrawerProps> = ({ isOpen, onClose, initial
     onClose();
   };
 
-  const handleBack = () => {
-    setView('menu');
-  };
 
   return (
     <AnimatePresence>

@@ -51,7 +51,7 @@ const DotGrid: React.FC<{ className?: string }> = ({ className }) => (
 
 export default function App() {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
-  const [drawerView, setDrawerView] = useState<'menu' | 'about' | 'projects' | 'contact'>('menu');
+  const [drawerView, setDrawerView] = useState<'menu' | 'projects' | 'contact'>('menu');
   const [headlineIndex, setHeadlineIndex] = useState(0);
 
   const headlinePhrases = ['INTENT', 'CREATIVITY', 'IMPACT', 'PURPOSE'];
@@ -63,7 +63,7 @@ export default function App() {
     return () => clearInterval(interval);
   }, []);
 
-  const openDrawerWithView = (view: 'menu' | 'about' | 'projects' | 'contact') => {
+  const openDrawerWithView = (view: 'menu' | 'projects' | 'contact') => {
     setDrawerView(view);
     setIsDrawerOpen(true);
   };
