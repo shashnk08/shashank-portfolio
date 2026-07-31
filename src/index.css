@@ -42,7 +42,21 @@ html, body {
   margin: 0;
   font-family: var(--font-sans);
   overflow-x: hidden;
+  /* Disable text highlighting & select */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  /* Prevent callout & touch menus on mobile */
+  -webkit-touch-callout: none;
 }
+
+img, svg {
+  -webkit-user-drag: none;
+  user-drag: none;
+  pointer-events: auto;
+}
+
 
 @keyframes marquee {
   0% {
