@@ -1,6 +1,6 @@
 /**
  * Security Protection Utilities to prevent source inspection, console logging,
- * and unauthorized code/design copying.
+ * HTML DOM inspection, and unauthorized code/design copying.
  */
 
 export function initializeSecurityProtection() {
@@ -12,7 +12,7 @@ export function initializeSecurityProtection() {
     return false;
   });
 
-  // 2. Disable DevTools Shortcut Keys
+  // 2. Disable DevTools Shortcut Keys & View Source
   document.addEventListener('keydown', (e: KeyboardEvent) => {
     // F12
     if (e.key === 'F12' || e.keyCode === 123) {
@@ -58,7 +58,7 @@ export function initializeSecurityProtection() {
 
   // 4. Console Protection: Silence console logging & clear console
   const noop = () => {};
-  const warningMsg = '%cWarning! Console access and code inspection is restricted on this portfolio.';
+  const warningMsg = '%cWarning! Console access and HTML code inspection is restricted on this portfolio.';
   const warningStyle = 'color: #ff3333; font-size: 16px; font-weight: bold; background: #000; padding: 10px; border-radius: 4px;';
 
   const wipeConsole = () => {
@@ -84,12 +84,44 @@ export function initializeSecurityProtection() {
   console.table = noop;
 
   // Continuous console wipe interval
-  setInterval(wipeConsole, 2000);
+  setInterval(wipeConsole, 1500);
 
-  // 5. Anti-Debugging Loop (Pauses DevTools if opened via browser menu)
+  // 5. DevTools Open Detector & HTML Shield
+  let devtoolsOpen = false;
+  const threshold = 160;
+
+  const checkDevTools = () => {
+    const widthDiff = window.outerWidth - window.innerWidth > threshold;
+    const heightDiff = window.outerHeight - window.innerHeight > threshold;
+
+    if (widthDiff || heightDiff) {
+      if (!devtoolsOpen) {
+        devtoolsOpen = true;
+        wipeConsole();
+        const rootEl = document.getElementById('root');
+        if (rootEl) {
+          rootEl.style.filter = 'blur(20px)';
+          rootEl.style.pointerEvents = 'none';
+        }
+      }
+    } else {
+      if (devtoolsOpen) {
+        devtoolsOpen = false;
+        const rootEl = document.getElementById('root');
+        if (rootEl) {
+          rootEl.style.filter = 'none';
+          rootEl.style.pointerEvents = 'auto';
+        }
+      }
+    }
+  };
+
+  window.addEventListener('resize', checkDevTools);
+  setInterval(checkDevTools, 1000);
+
+  // 6. Anti-Debugging Loop (Pauses DevTools if opened via browser menu)
   const devtoolsProtection = () => {
     const startTime = performance.now();
-    // Using Function evaluation to evade static analysis
     try {
       const dbg = new Function('debugger');
       dbg();
@@ -97,7 +129,6 @@ export function initializeSecurityProtection() {
       // ignore
     }
     const endTime = performance.now();
-    // If execution took long, DevTools is open and paused at debugger
     if (endTime - startTime > 100) {
       wipeConsole();
     }
