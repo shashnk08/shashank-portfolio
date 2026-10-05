@@ -1,0 +1,32 @@
+# robots.txt for shashankshettar.vercel.app
+
+User-agent: *
+Allow: /
+
+# Explicit permissions for AI Search & Answer Engines (GEO)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+# Sitemap definition
+Sitemap: https://shashankshettar.vercel.app/sitemap.xml

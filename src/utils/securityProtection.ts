@@ -118,21 +118,5 @@ export function initializeSecurityProtection() {
 
   window.addEventListener('resize', checkDevTools);
   setInterval(checkDevTools, 1000);
-
-  // 6. Anti-Debugging Loop (Pauses DevTools if opened via browser menu)
-  const devtoolsProtection = () => {
-    const startTime = performance.now();
-    try {
-      const dbg = new Function('debugger');
-      dbg();
-    } catch {
-      // ignore
-    }
-    const endTime = performance.now();
-    if (endTime - startTime > 100) {
-      wipeConsole();
-    }
-  };
-
-  setInterval(devtoolsProtection, 1000);
 }
+

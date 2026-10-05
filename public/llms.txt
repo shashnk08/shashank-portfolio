@@ -1,0 +1,43 @@
+# Shashank Shettar
+
+> Software Engineer & Backend / DevOps Specialist based in Bengaluru, India.
+> Builds robust backend architectures, scalable web applications, and intuitive user experiences.
+
+## Professional Summary
+Shashank Shettar (also known as Shashank G S) is a software engineer specializing in backend systems (Django, Django REST Framework, PostgreSQL, Redis), modern frontend development (React, TypeScript, Tailwind CSS), and cloud deployments (Docker, AWS, DigitalOcean, Linux). He is currently working as a Software Engineer at Stalight Technologies.
+
+## Core Technical Skills
+- **Programming Languages**: Python, TypeScript, JavaScript, HTML5, CSS3, SQL
+- **Backend Frameworks & Databases**: Django, Django REST Framework, PostgreSQL, MySQL, Redis, RESTful API Design
+- **Frontend & UI**: React, Vite, Tailwind CSS, Redux Toolkit, Framer Motion
+- **DevOps & Infrastructure**: Docker, AWS, DigitalOcean, Nginx, Linux, CI/CD, Git, GitHub Actions, Vercel
+- **Specializations**: System Architecture, API Security, Performance Optimization, Agentic AI
+
+## Professional Experience
+### Software Engineer — Stalight Technologies (2026 – Present)
+- Designed robust API endpoints and application workflows using Django and REST Framework.
+- Developed and maintained responsive, interactive user interfaces using React.
+- Managed deployment pipelines, testing cycles, and production software releases.
+
+## Education
+- **AMC Engineering College** (2022 – 2026): Bachelor of Engineering
+- **Jnanodaya PU College** (2020 – 2022): PCMB
+- **Vijaya High School** (2017 – 2020): Secondary Education
+
+## Featured Projects
+### HOME-SERVO
+- **Description**: A full-stack home services booking platform connecting users with trusted professionals for plumbing, electrical, carpentry, cleaning, and maintenance services.
+- **Stack**: React, Django, Django REST Framework, PostgreSQL.
+
+### XPRESSWASH
+- **Website**: https://xpresswash.in/
+- **Description**: A modern car wash booking platform streamlining service scheduling, customer management, and appointment workflows with seamless CRM integration.
+- **Stack**: React, Supabase, Zoho CRM, JavaScript.
+
+## Online Presence & Contact
+- **Portfolio Website**: https://shashankshettar.vercel.app
+- **GitHub**: https://github.com/shashnk08
+- **LinkedIn**: https://www.linkedin.com/in/shashank-g-s-a2b425225/
+- **Instagram**: https://www.instagram.com/shashank_shettar08
+- **Email**: shashankgs082004@gmail.com
+- **Location**: Bengaluru, Karnataka, India
